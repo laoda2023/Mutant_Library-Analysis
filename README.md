@@ -98,3 +98,6 @@ conda activate pyr1-analysis
    ### 3. Computes the coverage of mutants
    ```bash
    python3 step3_coverage_dsm.py
+   ```
+## License & DOI
+This project is licensed under the GNU General Public License, version 3 (GPLv3) - see the LICENSE.md file for details, and the DOI for the app is: [![DOI](https://zenodo.org/badge/976224879.svg)](https://doi.org/10.5281/zenodo.15320395)
