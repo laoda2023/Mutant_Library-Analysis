@@ -1,0 +1,43 @@
+name: deepseq
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - bzip2=1.0.8
+  - ca-certificates=2025.4.26
+  - colorama=0.4.6
+  - et_xmlfile=2.0.0
+  - libblas=3.9.0
+  - libcblas=3.9.0
+  - libcxx=19.1.7
+  - libexpat=2.6.4
+  - libffi=3.4.2
+  - libgfortran=5.0.0
+  - libgfortran5=13.2.0
+  - liblapack=3.9.0
+  - liblzma=5.6.4
+  - libmpdec=4.0.0
+  - libopenblas=0.3.29
+  - libsqlite=3.49.1
+  - libzlib=1.3.1
+  - llvm-openmp=19.1.7
+  - ncurses=6.5
+  - numpy=2.2.4
+  - openpyxl=3.1.5
+  - openssl=3.5.0
+  - pandas=2.2.3
+  - pip=25.0.1
+  - python=3.13.2
+  - python-dateutil=2.9.0.post0
+  - python-tzdata=2025.1
+  - python_abi=3.13
+  - pytz=2024.1
+  - readline=8.2
+  - six=1.17.0
+  - tk=8.6.13
+  - tqdm=4.67.1
+  - tzdata=2025a
+prefix: /Users/tianhao/miniconda3/envs/deepseq
