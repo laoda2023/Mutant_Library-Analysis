@@ -18,10 +18,11 @@ The scripts are designed to process FASTQ files and calculate:
 The code is compatible with sequencing data generated using an **improved version of the evSeq method**.
 
 ## Scripts and related files
-
-- `step1_merge_dsm.py`: merge two fastq files with forward and reverse reads from deep sequencing of DSM-Hao library
-- `step2_counts_dsm.py`:
+   ### Merge Paired-End Reads
+   - `./PYR1_DSM-Hao/step1_merge_dsm.py`: merge two fastq files with forward and reverse reads from deep sequencing of DSM-Hao library
    ### Mutation Calling and Quality Control Workflow
+   - `./PYR1_DSM-Hao/step2_counts_dsm.py`:
+  
    This script processes merged paired-end deep sequencing FASTQ files to identify mutations in biosensor libraries. The workflow includes the following steps:
 
    1. **Filtering Reads Containing Ambiguous Bases**  
@@ -41,9 +42,9 @@ The code is compatible with sequencing data generated using an **improved versio
       - ❌ Number of reads discarded due to quality issues or ambiguous bases  
       - 🧬 Number of wild-type reads  
       - 🔬 A list of identified mutations and their corresponding read counts  
-- `step3_coverage_dsm.py`:
+   
    ### Mutant Proportion and Coverage Calculation
-
+   - `./PYR1_DSM-Hao/step3_coverage_dsm.py`:
    This script performs the following analyses:
 
    1. 📊 **Calculates the proportion of different mutation types**, including wild-type (WT), single, double, up to 9-site mutants.
@@ -53,18 +54,16 @@ The code is compatible with sequencing data generated using an **improved versio
       *Total coverage = total observed mutants / total expected mutants*
    4. ⚠️ **Calculates the proportion of mutants containing deletions**.
 
-- `step1_merge_triple.py`: it has same function as `step1_merge_dsm.py`.
-- `step2_counts_triple.py`: it has same function as `step2_counts_dsm.py`.
-- `step3_coverage_triple.py`: Unlike `step3_coverage_dsm`, this script calculates the coverage of different triple-mutant combinations generated.
-- `step1_merge.py`: it has same function as `step1_merge_dsm.py`.
-- `step2_uniform.py`:
+   - `./PYR1_Triple/step1_merge_triple.py`: it has same function as `step1_merge_dsm.py`.
+   - `./PYR1_Triple/step2_counts_triple.py`: it has same function as `step2_counts_dsm.py`.
+   - `./PYR1_Triple/step3_coverage_triple.py`: Unlike `step3_coverage_dsm`, this script calculates the coverage of different triple-mutant combinations generated.
+   - `./PYR1_evSeq/step1_merge.py`: it has same function as `step1_merge_dsm.py`.
    ### Quality Control and Read Normalization
+   - `./PYR1_evSeq/step2_uniform.py`:
    This script performs quality control by removing reads with base quality scores (Q) below 20 at any of the designed mutation sites. All retained reads are then converted to the forward-strand sequence of PYR1 for consistency.
-- `step3_counts.py`:
    ### Mutation Frequency Analysis
-
+   - `./PYR1_evSeq/step3_counts.py`:
    This script analyzes mutations in deep sequencing files and their corresponding frequencies. It generates a table where each row represents a specific pair of barcodes, corresponding to individual hits.
-
    - For each barcode pair, the script identifies and ranks the top three mutations by frequency:
      1. Most frequent mutation
      2. Second most frequent mutation
