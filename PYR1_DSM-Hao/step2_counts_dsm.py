@@ -131,7 +131,7 @@ def write_mutation_counts(path, outpath):
                 print("discarded: ", discarded)      	
 
     with open(outpath, 'w') as f:
-        print('kept_f %i discarded %i' % (kept_f + kept_r, discarded), file=f)
+        print('kept_f_r %i discarded %i' % (kept_f + kept_r, discarded), file=f)
  
         for (muts, count) in sorted(mut_count.items(),
                                     key=lambda x: x[1],
